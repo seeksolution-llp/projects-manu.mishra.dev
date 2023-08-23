@@ -1,0 +1,23 @@
+body{
+  background-color: rgb(229, 174, 107);
+}
+.content{
+  padding-top: 10px;
+  background-color:rgb(246, 215, 175) ;
+}
+.row{
+  display: flex;
+  gap:10px;
+}
+mat-form-field{
+  width:100%;
+}
+
+.action{
+  padding:0px 25px 20px;
+
+
+}
+button{
+  flex:1;
+}

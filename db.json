@@ -1,0 +1,59 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": [
+    {
+      "name": "typicode"
+    }
+  ],
+  "employess": [
+    {
+      "firstname": "Harry",
+      "lastname": "--",
+      "email": "harry@gmail.com",
+      "dob": "1996-02-05T18:30:00.000Z",
+      "gender": "male",
+      "education": "Diploma",
+      "company": "fb",
+      "exp": 1,
+      "package": 10,
+      "id": 1
+    },
+    {
+      "firstname": "Mariya",
+      "lastname": "Khan",
+      "email": "mariya154@gmail.com",
+      "dob": "1996-01-01T18:30:00.000Z",
+      "gender": "female",
+      "education": "Greduate",
+      "company": "tech",
+      "exp": 2,
+      "package": 12,
+      "id": 2
+    },
+    {
+      "firstname": "David",
+      "lastname": "Dhvan",
+      "email": "david@gmail.com",
+      "dob": "1994-01-08T18:30:00.000Z",
+      "gender": "male",
+      "education": "Greduate",
+      "company": "Infosis",
+      "exp": 5,
+      "package": 20,
+      "id": 3
+    }
+  ]
+}
