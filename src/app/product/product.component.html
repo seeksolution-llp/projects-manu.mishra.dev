@@ -1,0 +1,102 @@
+<nav class="navbar navbar-light bg-primary">
+  <div class="container-fluid">
+    <h2 style="color:white">E-Commerce CRUD Poject</h2>
+    <div class="d-flex">
+       <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="clickAddProduct()">Add Product</button>
+       <button class="btn btn-danger mx-3" routerLink="/login">Log Out </button>
+</div>
+  </div>
+</nav>
+
+<div class="p-5 mb-4 bg-light rounded-3">
+  <div class="container-fluid py-3">
+      <h1 class="display-5 fw-bold">Product Management</h1>
+      <p class="col-mb-8 fs-4">You Can Add Products Data Here</p>
+      <a class="btn btn-primary" target="blank" href="http://localhost:3000/product">View</a>
+    </div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Category</th>
+      <th scope="col">Description</th>
+      <th scope="col">Price</th>
+      <th scope="col">Discount</th>
+      <th scope="col">Final-Price</th>
+      <th scope="col">Action</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let data of allProduct">
+      <td>{{data.id}}</td>
+      <td>{{data.pname}}</td>
+      <td>{{data.pcategory}}</td>
+      <td>{{data.pdiscription}}</td>
+      <td>{{data.pprice}}</td>
+      <td>{{data.pdiscount}}%</td>
+      <td>{{data.pfinalprice}}</td>
+
+
+      <td> <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="editProduct(data)">Edit</button>
+           <button class="btn btn-danger mx-2" (click)= "deletePro(data.id)">Delete</button>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Products Record Form </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+           <form [formGroup]="formValue">
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Product Name </label>
+             <input formControlName="pname" type="text" class="form-control" placeholder="Enter Product Name">
+          </div>
+
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Product Category </label>
+             <input formControlName="pcategory" type="text" class="form-control" placeholder="Enter Product Category">
+          </div>
+
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Product Description </label>
+             <textarea formControlName="pdiscription" type="text" class="form-control" placeholder="Enter Product Discription"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Product Price </label>
+             <input formControlName="pprice" type="text" class="form-control" placeholder="Enter Product Price">
+          </div>
+
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Product Discount </label>
+             <input formControlName="pdiscount" type="text" class="form-control" placeholder="Enter Product Discount">
+          </div>
+        </form>
+         </div>
+
+
+      <div class="modal-footer">
+
+        <button type="button" id="clear" class="btn btn-secondary" data-bs-dismiss="modal">Clear</button>
+
+        <button type="button"   class="btn btn-primary" *ngIf="showAdd" (click)="addProduct()">Add Product</button>
+
+        <button type="button" *ngIf="showEdit"  class="btn btn-warning" (click)="updatePro()"> Update </button>
+
+      </div>
+    </div>
+  </div>
+</div>
+

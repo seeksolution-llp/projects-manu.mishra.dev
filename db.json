@@ -1,0 +1,85 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "pname": "tv",
+      "pcategory": "device",
+      "pdiscription": "nice",
+      "pprice": "20000",
+      "pdiscount": "10",
+      "pfinalprice": 18000
+    },
+    {
+      "id": 2,
+      "pname": "Laptop",
+      "pcategory": "PC",
+      "pdiscription": "Very Good",
+      "pprice": "34000",
+      "pdiscount": "10",
+      "pfinalprice": 30600
+    },
+    {
+      "id": 3,
+      "pname": "Watch",
+      "pcategory": "Device",
+      "pdiscription": "Excilent",
+      "pprice": "2000",
+      "pdiscount": "2",
+      "pfinalprice": 1960
+    }
+  ],
+  "login": [],
+  "signup": [
+    {
+      "name": "harry",
+      "email": "harry@gmail.com",
+      "password": "789456",
+      "id": 1
+    },
+    {
+      "name": "good",
+      "email": "7542subhi@gmail.com",
+      "password": "456123",
+      "id": 3
+    },
+    {
+      "name": "Surbhi Mishra",
+      "email": "8840surbhi@gmail.com",
+      "password": "123456",
+      "id": 4
+    },
+    {
+      "name": "john",
+      "email": "457john@gmail.com",
+      "password": "123456",
+      "id": 5
+    },
+    {
+      "name": "john",
+      "email": "john123@gmail.com",
+      "password": "123456",
+      "id": 6
+    },
+    {
+      "name": "manu",
+      "email": "manu@gmail.com",
+      "password": "456123",
+      "id": 7
+    },
+    {
+      "name": "manu",
+      "email": "manu@gmail.com",
+      "password": "456123",
+      "id": 8
+    },
+    {
+      "name": "manu",
+      "email": "manu@gmail.com",
+      "password": "456123",
+      "id": 9
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
